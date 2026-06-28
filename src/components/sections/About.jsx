@@ -56,7 +56,7 @@ export default function About() {
                     <motion.img
                       src="/logo.png"
                       alt="ASTRORATAN"
-                      className="w-48 h-48 object-contain relative z-10"
+                      className="w-64 h-64 object-contain relative z-10 rounded-3xl"
                       animate={{ y: [0, -10, 0] }}
                       transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                       style={{ filter: 'drop-shadow(0 0 30px rgba(212,175,55,0.5))' }}

@@ -58,26 +58,26 @@ export default function Navbar() {
             {/* Logo */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center gap-3 group"
+              className="flex min-w-0 items-center gap-3 group"
             >
               <img
                 src={brand.logo}
                 alt="ASTRORATAN Logo"
-                className="w-12 h-12 object-contain rounded-full"
+                className="w-14 h-14 shrink-0 object-contain rounded-xl"
                 style={{ filter: 'drop-shadow(0 0 8px rgba(212,175,55,0.5))' }}
               />
-              <div className="hidden sm:block">
+              <div className="min-w-0 text-left">
                 <p
-                  className="font-display font-bold text-lg leading-tight tracking-widest"
+                  className="font-display font-bold text-base sm:text-lg leading-tight tracking-widest truncate"
                   style={{ color: '#4B1F73' }}
                 >
-                  ASTRORATAN
+                  {brand.name}
                 </p>
                 <p
-                  className="font-sans text-xs tracking-widest uppercase"
-                  style={{ color: '#D4AF37' }}
+                  className="hidden sm:block font-sans text-xs font-semibold tracking-widest uppercase truncate"
+                  style={{ color: '#9C6B00' }}
                 >
-                  Occult Gurukul
+                  {brand.subtitle}
                 </p>
               </div>
             </button>

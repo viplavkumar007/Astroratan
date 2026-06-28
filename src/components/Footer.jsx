@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src={brand.logo} alt="ASTRORATAN" className="w-12 h-12 object-contain rounded-full"
+              <img src={brand.logo} alt="ASTRORATAN" className="w-14 h-14 object-contain rounded-xl"
                 style={{ filter: 'drop-shadow(0 0 8px rgba(212,175,55,0.5))' }} />
               <div>
                 <p className="font-display font-bold text-base tracking-widest text-gold-gradient">ASTRORATAN</p>

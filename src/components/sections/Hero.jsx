@@ -27,9 +27,9 @@ const ZodiacWheel = () => (
   >
     <svg viewBox="0 0 300 300" width="340" height="340">
       {/* Outer ring */}
-      <circle cx="150" cy="150" r="140" fill="none" stroke="rgba(212,175,55,0.3)" strokeWidth="1.5" strokeDasharray="4,6" />
-      <circle cx="150" cy="150" r="120" fill="none" stroke="rgba(212,175,55,0.15)" strokeWidth="1" />
-      <circle cx="150" cy="150" r="80" fill="none" stroke="rgba(212,175,55,0.2)" strokeWidth="1" strokeDasharray="2,4" />
+      <circle cx="150" cy="150" r="140" fill="none" stroke="rgba(156,107,0,0.65)" strokeWidth="1.8" strokeDasharray="4,6" />
+      <circle cx="150" cy="150" r="120" fill="none" stroke="rgba(75,31,115,0.35)" strokeWidth="1.2" />
+      <circle cx="150" cy="150" r="80" fill="none" stroke="rgba(156,107,0,0.45)" strokeWidth="1.2" strokeDasharray="2,4" />
       {/* Spokes */}
       {Array.from({ length: 12 }).map((_, i) => {
         const angle = (i * 30 * Math.PI) / 180
@@ -37,7 +37,7 @@ const ZodiacWheel = () => (
         const y1 = 150 + 80 * Math.sin(angle)
         const x2 = 150 + 140 * Math.cos(angle)
         const y2 = 150 + 140 * Math.sin(angle)
-        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(212,175,55,0.25)" strokeWidth="0.8" />
+        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(75,31,115,0.28)" strokeWidth="1" />
       })}
       {/* Zodiac symbols on ring */}
       {['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓'].map((sym, i) => {
@@ -46,16 +46,16 @@ const ZodiacWheel = () => (
         const y = 150 + 128 * Math.sin(angle)
         return (
           <text key={i} x={x} y={y} textAnchor="middle" dominantBaseline="middle"
-            fontSize="11" fill="rgba(212,175,55,0.7)" fontFamily="serif">
+            fontSize="11" fill="rgba(75,31,115,0.85)" fontFamily="serif">
             {sym}
           </text>
         )
       })}
       {/* Center star */}
       <polygon points="150,120 157,142 180,142 162,155 169,177 150,165 131,177 138,155 120,142 143,142"
-        fill="rgba(212,175,55,0.6)" stroke="rgba(212,175,55,0.9)" strokeWidth="0.5" />
-      <circle cx="150" cy="150" r="18" fill="rgba(45,10,78,0.8)" stroke="rgba(212,175,55,0.6)" strokeWidth="1.5" />
-      <circle cx="150" cy="150" r="8" fill="rgba(212,175,55,0.5)" />
+        fill="rgba(212,175,55,0.9)" stroke="rgba(156,107,0,0.95)" strokeWidth="0.7" />
+      <circle cx="150" cy="150" r="18" fill="rgba(45,10,78,0.92)" stroke="rgba(156,107,0,0.8)" strokeWidth="1.8" />
+      <circle cx="150" cy="150" r="8" fill="rgba(212,175,55,0.85)" />
     </svg>
   </motion.div>
 )
@@ -221,11 +221,11 @@ export default function Hero() {
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >
               <div
-                className="absolute inset-0 rounded-full blur-3xl opacity-60"
+                className="absolute inset-0 rounded-[2rem] blur-3xl opacity-60"
                 style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.4) 0%, rgba(75,31,115,0.3) 50%, transparent 70%)' }}
               />
               <div
-                className="relative rounded-full p-3"
+                className="relative rounded-[2rem] p-3"
                 style={{
                   background: 'linear-gradient(135deg, #2D0A4E, #4B1F73)',
                   boxShadow: '0 0 60px rgba(212,175,55,0.4), 0 0 120px rgba(75,31,115,0.3), inset 0 1px 0 rgba(212,175,55,0.3)',
@@ -235,13 +235,13 @@ export default function Hero() {
                 <img
                   src={brand.logo}
                   alt="ASTRORATAN"
-                  className="w-64 h-64 md:w-80 md:h-80 object-contain rounded-full"
+                  className="w-64 h-64 md:w-80 md:h-80 object-contain rounded-3xl"
                 />
               </div>
             </motion.div>
 
             {/* Zodiac wheel below */}
-            <div className="opacity-60">
+            <div className="opacity-90">
               <ZodiacWheel />
             </div>
           </motion.div>
